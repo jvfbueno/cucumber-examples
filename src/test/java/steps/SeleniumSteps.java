@@ -1,10 +1,7 @@
 package steps;
 
-import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.Transform;
 import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -51,7 +48,7 @@ public class SeleniumSteps {
 
     @Given("^I have some data$")
     public void iHaveSomeData(List<Flight> flights) throws Throwable {
-        flights.forEach((k)-> System.out.println("Passagero: "+ k.getPassengers()));
+        flights.forEach((k)-> System.out.println("Number of passengers: "+ k.getPassengers()));
     }
 
     @Given("^I have \"([^\"]*)\" as a date$")
