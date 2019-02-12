@@ -9,16 +9,9 @@ import org.junit.runner.RunWith;
         features ={"src/test/resources/features/FirstFeature.feature"},
         glue={"steps"},
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"}
+        //tags = {"~@Selenium"}
+        //tags = {"not @Selenium"}
 )
 public class RunnerTest {
-
-    @Before
-    public void setUp(){
-    }
-
-
-    @After
-    public void tearDown(){
-    }
 
 }
