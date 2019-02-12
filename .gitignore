@@ -2,3 +2,4 @@
 modules.xml
 .idea/
 target/
+src/test/resources/webdrivers
