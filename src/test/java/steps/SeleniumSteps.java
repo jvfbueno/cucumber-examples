@@ -32,6 +32,6 @@ public class SeleniumSteps {
     @Then("^the page presents some valid results$")
     public void thePagePresentsSomeValidResults() throws Throwable {
         Thread.sleep(2000);
-        assertThat(broswer.getDriver().findElement(By.name("q")).getAttribute("value"), containsString("xablablau"));
+        assertThat(broswer.getDriver().findElement(By.name("q")).getAttribute("value"), containsString("teste"));
     }
 }
