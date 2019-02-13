@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.TypeRegistry;
 import cucumber.api.TypeRegistryConfigurer;
 import customTypes.Flight;
+import customTypes.Item;
 import io.cucumber.datatable.DataTableType;
 import io.cucumber.datatable.TableEntryTransformer;
 
@@ -19,16 +20,18 @@ public class DataTableConfigurer implements TypeRegistryConfigurer {
 
     @Override
     public void configureTypeRegistry(TypeRegistry typeRegistry) {
-        typeRegistry.defineDataTableType(new DataTableType(Flight.class, new TableEntryTransformer<Flight>() {
+        typeRegistry.defineDataTableType(new DataTableType(Item.class, new TableEntryTransformer<Item>() {
+
             @Override
-            public Flight transform(Map<String, String> row) {
-                String category = row.get("category");
-                String date = row.get("date");
-                String time = row.get("time");
-                Integer passengers = Integer.parseInt(row.get("passengers"));
-                return new Flight(category, date, time, passengers);
+            public Item transform(Map<String, String> row) {
+                String name = row.get("name");
+                Double price = Double.parseDouble(row.get("price"));
+                return new Item(name, price);
             }
-        }));
+        }
+
+
+        ));
 
 
 

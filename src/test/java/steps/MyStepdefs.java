@@ -10,10 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class MyStepdefs {
-    @Given("^the user is on login page$")
-    public void theUserIsOnLoginPage() throws Throwable {
-        System.out.println("The user is on login page step");
-    }
+
 
     @When("^the user login using valid credentials$")
     public void theUserLoginUsingValidCredentials() throws Throwable {
@@ -30,24 +27,7 @@ public class MyStepdefs {
         System.out.println("The credentials are:" + credential);
     }
 
-    @BeforeStep
-    public void beforeStep(){
-        System.out.println("Antes de cada step");
-    }
-
-    @AfterStep
-    public void afterStep(){
-        System.out.println("Depois de cada step");
-    }
 
 
-    @Before("@Outline")
-    public void beforeScenario(){
-        System.out.println("Antes de cada cenario");
-    }
 
-    @After
-    public void afterScenario(){
-        System.out.println("Depois de cada cenario");
-    }
 }
