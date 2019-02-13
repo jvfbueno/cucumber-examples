@@ -15,13 +15,15 @@ Cucumber 1.2.5:
  - No required configuration for datatables;
  - No support for tag expressions; - check https://github.com/cucumber/cucumber/tree/master/tag-expressions
  - No support for BeforeStep and AfterStep hooks.
+ 
 Cucumber 3:
  - Transformers no longer work; - more details on https://cucumber.io/blog/2018/05/19/announcing-cucumber-jvm-3-0-0
  - Required configuration for DataTable with 'DataTableConfigurerer' interface.
  - Cucumber expressions: on step definitions you can use the types instead of regex, e.g., {string}
  - BeforeStep and AfterStep annotation hooks.
 
-#Selenium integration
+# Selenium integration
+
 To run the selenium based tests, you need to add the 'chromedriver' file to 'src/tests/resources/webdrivers' package. Any changes concerning the webdriver path can be done on 'src/tests/java/utils/Browser.java' class.
 You can download a compatible version of 'chromedriver' with your current 'chrome' installation on the following link: https://sites.google.com/a/chromium.org/chromedriver/downloads/version-selection
 
