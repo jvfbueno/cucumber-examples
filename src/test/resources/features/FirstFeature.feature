@@ -1,4 +1,4 @@
-#Feature: Google search
+Feature: data
 #  @Selenium
 #  Scenario: Happy flow for search
 #    Given the user is on "https://www.google.com" page
@@ -15,3 +15,13 @@
 #  Feature: data
 #    Scenario: transformer
 #      Given I have "2-22-2019" as a date
+
+Scenario Outline: datatables e tipos de dados customizados
+Given um tipo de dado customizado
+| category| date      | time | passengers|
+| <teste>   | 2018-10-9 | 23:00| 6         |
+| cl650   | 2018-10-2 | 10:00| 2         |
+  Examples:
+  |teste|
+  |123  |
+  |456  |

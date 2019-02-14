@@ -19,6 +19,7 @@ import static org.junit.Assert.assertThat;
 public class SeleniumSteps {
 
     Browser browser = new Browser();
+    List<Flight> flight;
 
     @Given("^the user is on \"([^\"]*)\" page$")
     public void theUserIsOnPage(String url) throws Throwable {
@@ -55,4 +56,11 @@ public class SeleniumSteps {
     public void iHaveAsADate(@Transform(DateTransformer.class)Date date) throws Throwable {
         System.out.println("DATA:"+date);
     }
+
+    @Given("^um tipo de dado customizado$")
+    public void umTipoDeDadoCustomizado(List<Flight> flight) throws Throwable {
+        this.flight = flight;
+        flight.forEach((k)-> System.out.println("Flight: "+k.getCategory()));
+    }
+
 }
